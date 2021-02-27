@@ -1,0 +1,45 @@
+ {
+    "ID": "cjv2d9zqucz9g0878hgpjrww1",
+    "DataRow ID": "cjutxjc3976ug0bj4y829gw46",
+    "Labeled Data": "http://vision.cms.bgu.tum.de/Luftbilder/DLR_3K_Daten/DLR/Muenchen/2018-10-02/R1021.jpg",
+    "Label": {
+      "Construction": [
+        {
+          "confidence": [
+            "cropped"
+          ],
+          "geometry": [
+            {
+              "x": 5184,
+              "y": 3133
+            },
+            {
+              "x": 1592,
+              "y": 3134
+            },
+            {
+              "x": 1592,
+              "y": 0
+            },
+            {
+              "x": 5184,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "miwa14dorosh@gmail.com",
+    "Project Name": "Luftbilder_DLR_Muenchen_2018-10-02",
+    "Created At": "2019-04-29T12:56:44.000Z",
+    "Updated At": "2019-04-29T12:56:44.000Z",
+    "Seconds to Label": 56.608,
+    "External ID": null,
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "Luftbilder_DLR_Muenchen_2018-10-02.csv",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=cjutxlvgj5kqa0799abvpcpgf&label=cjv2d9zqucz9g0878hgpjrww1"
+  }

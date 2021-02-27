@@ -1,0 +1,7 @@
+input_path=$sparse_model_path_ba_out
+output_path=$sparse_model_path
+random_seed=0
+ref_images_path=$ref_image_list
+min_common_images=3
+robust_alignment=1
+robust_alignment_max_error=0.3

@@ -1,0 +1,12 @@
+input_path=$sparse_model_path_ba_in
+output_path=$sparse_model_path_ba_out
+[BundleAdjustment]
+refine_focal_length=true
+refine_principal_point=false
+refine_extra_params=true
+refine_extrinsics=true
+max_num_iterations=500
+max_linear_solver_iterations=200
+function_tolerance=0
+gradient_tolerance=0
+parameter_tolerance=0

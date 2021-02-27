@@ -1,0 +1,15 @@
+workspace_path=$dense_model_path
+workspace_format=COLMAP
+pmvs_option_name=option-all
+input_type=photometric
+output_path=$ply_output_path
+[StereoFusion]
+max_image_size=-1
+min_num_pixels=5
+max_num_pixels=1000000
+max_traversal_depth=100
+check_num_images=45
+max_reproj_error=16
+max_depth_error=0.0099999997764825821
+max_normal_error=30
+cache_size=56

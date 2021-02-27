@@ -1,0 +1,3 @@
+[submodule "colmap_automate"]
+	path = colmap_automate
+	url = https://gitlab.lrz.de/cms/dev/colmap_automate.git
