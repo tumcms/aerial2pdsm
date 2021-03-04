@@ -3,6 +3,7 @@ venv
 .idea
 submodules/*
 submodules/colmap_scripts
+submodules/colmap_scripts/*
 !submodules/gitdir
 !submodules/colmap_automate
 !submodules/populator.py
