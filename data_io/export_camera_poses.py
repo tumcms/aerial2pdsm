@@ -7,8 +7,6 @@ import numpy as np
 project = SparseModel("/home/felix/pointclouds/_working/2019_11_07_Muenchen_26_10_2018",
                       model_path="/home/felix/pointclouds/_working/2019_11_07_Muenchen_26_10_2018/sparse/1")
 
-# work
-# keypoints = ReadKeypointFile(keypoint_path)
 images = project.images
 cameras = project.cameras
 
@@ -22,10 +20,5 @@ for nr, img in images.items():
     poses.append(pose)
 
 vertex = np.array(poses, dtype=dt)
-    #dtype = dt)
-# vertex.dtype = [("x", "f8"), ("y", "f8"), ("z", "f8"), ("image_id", "u4")]
-# vertex = vertex.squeeze(axis=1)
 v = plyfile.PlyElement.describe(vertex, "vertices")
-# e = plyfile.PlyElement.describe(edges, "edges")
-
 plyfile.PlyData([v], text=True).write(project.model_path + "/camera_locations.ply")

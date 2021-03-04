@@ -1,13 +1,12 @@
 import xml.etree.ElementTree as ET
-
 import numpy as np
-
 from colmap_automate.app import CreateDirectory
 from colmap_scripts.database import COLMAPDatabase
-from config import Keypoint, SfmModel
-from helpers import GetClosestFeature
-from observation import Observation, CoordMapping
-from sql_interface import InsertIntoDetectedAreas, GetDetectedAreaById, GetObservationById, UpdateObservation_Area
+from sfm_helpers import Keypoint, SfmModel
+from survey.helpers import GetClosestFeature
+from survey.observation import Observation
+from coordinate_mapping import CoordMapping
+from data_io.sql_interface import InsertIntoDetectedAreas, GetDetectedAreaById, GetObservationById, UpdateObservation_Area
 
 
 class DetectedArea:
@@ -42,10 +41,6 @@ class DetectedArea:
             obs = Observation(data[16], data[17], i00, i11, m00, m11)
             obs.id = data[0]
 
-            # could leverage from db
-            # rotm = qvec2rotmat(np.array([data[8], data[9], data[10], data[11]]))
-            # tvec = np.array(data[12], data[13], data[14])
-            # or out file!
             imagebase_path = survey.get_observations_path() / obs.get_relative_path() / obs.get_imagebase_filename()
             obs.mapping = CoordMapping(np.loadtxt(imagebase_path))
             self.major_observation = obs

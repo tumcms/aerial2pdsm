@@ -1,7 +1,7 @@
  {
-    "ID": "cjv2d9zqucz9g0878hgpjrww1",
-    "DataRow ID": "cjutxjc3976ug0bj4y829gw46",
-    "Labeled Data": "http://vision.cms.bgu.tum.de/Luftbilder/DLR_3K_Daten/DLR/Muenchen/2018-10-02/R1021.jpg",
+    "ID": "@UNIQUE_ID",
+    "DataRow ID": "@OTHER_ID",
+    "Labeled Data": "@WEB_PATH_TO_IMAGE",
     "Label": {
       "Construction": [
         {
@@ -29,17 +29,17 @@
         }
       ]
     },
-    "Created By": "miwa14dorosh@gmail.com",
-    "Project Name": "Luftbilder_DLR_Muenchen_2018-10-02",
-    "Created At": "2019-04-29T12:56:44.000Z",
-    "Updated At": "2019-04-29T12:56:44.000Z",
-    "Seconds to Label": 56.608,
+    "Created By": "@EMAIL",
+    "Project Name": "@PROJECT_NAME",
+    "Created At": "YYYY-MM-DDTHH:MIN:SEK",
+    "Updated At": "YYYY-MM-DDTHH:MIN:SEK",
+    "Seconds to Label": "@TIME_TO_LABEL",
     "External ID": null,
     "Agreement": null,
     "Benchmark Agreement": null,
     "Benchmark ID": null,
     "Benchmark Reference ID": null,
-    "Dataset Name": "Luftbilder_DLR_Muenchen_2018-10-02.csv",
+    "Dataset Name": "@DATASET_NAME",
     "Reviews": [],
-    "View Label": "https://image-segmentation-v4.labelbox.com?project=cjutxlvgj5kqa0799abvpcpgf&label=cjv2d9zqucz9g0878hgpjrww1"
+    "View Label": "@PATH_TO_LABELED_VIEWER_IF_YOU_HAVE_ONE"
   }

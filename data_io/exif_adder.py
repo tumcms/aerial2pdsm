@@ -5,7 +5,8 @@ import config
 from os import listdir, path
 from fractions import Fraction
 
-from geo_alignment import pattern_write, ReadAux_DLR
+from survey.geo_alignment import pattern_write
+from data_io.dlr_reader import ReadAux_DLR
 
 
 # from c060604 github
@@ -67,7 +68,7 @@ def RewriteAuxExif(image_folder_path):
 
 
 if __name__ == "__main__":
-    base_path = "/home/felix/pointclouds/_working/2019_11_12_Muenchen_2019_06_28"
+    base_path = "example_path"
     proj = config.SparseModel(config.project_path if not base_path else base_path)
     for fname in listdir(proj.images_path):
         folder = path.join(proj.images_path, fname)

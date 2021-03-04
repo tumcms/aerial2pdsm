@@ -1,10 +1,8 @@
-from closest_keypoint import ReadKeypointFile
-from config import keypoint_path, SparseModel, project_path, Keypoint, QueryMatch
-from helpers import GetClosestFeature
-from plotter import ImagePlot, plt
+from ..survey.sfm_helpers import SparseModel
 
 if __name__ == "__main__":
     # post_condition
+    project_path = r""
     project = SparseModel(project_path, model_path=project_path + r"/sparse/aligned")
     images = project.images
     if True:

@@ -1,7 +1,7 @@
-from config import Keypoint
-from detected_areas import DetectedArea
-from survey import Survey
-from helpers import Point2DType
+from survey.sfm_helpers import Keypoint
+from survey.detected_areas import DetectedArea
+from survey.survey import Survey
+from survey.helpers import Point2DType
 import numpy as np
 
 

@@ -1,16 +1,15 @@
 import numpy as np
 from numpy.lib.recfunctions import structured_to_unstructured, unstructured_to_structured
-from colmap_scripts import read_write_model as rm, plyfile
+from colmap_scripts import read_write_model as rm
+import plyfile
 from colmap_scripts.read_write_model import Point3D
-from config import QueryMatch, Keypoint
+from sfm_helpers import QueryMatch, Keypoint, SparseModel, GetInlineMatches, SfmModel
 from scipy.spatial import KDTree, cKDTree
 from os.path import basename
 import os
 
+
 # https://codereview.stackexchange.com/questions/28207/finding-the-closest-point-to-a-list-of-points
-from config import SparseModel, GetInlineMatches, SfmModel
-
-
 def closest_point2d(node, nodes):
     nodes = np.asarray(nodes)
     deltas = nodes - node

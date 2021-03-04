@@ -1,12 +1,11 @@
-from os import path, mkdir
-from subprocess import call
 import numpy as np
-from scipy.spatial.ckdtree import cKDTree
-
 from colmap_scripts import read_write_model as rwm
 from colmap_scripts.database import COLMAPDatabase, blob_to_array
-from colmap_scripts.read_write_model import BaseImage, Camera, CAMERA_MODELS, CAMERA_MODEL_IDS, Point3D, qvec2rotmat
-from config import SparseModel, project_path, GetInlineMatches, SfmModel
+from colmap_scripts.read_write_model import BaseImage, Camera, CAMERA_MODEL_IDS, Point3D, qvec2rotmat
+from sfm_helpers import SparseModel, GetInlineMatches, SfmModel
+from shutil import copyfile
+import os.path
+from pathlib import Path
 
 
 # due to id issues its easy to start the process partially again. Also we can increase the number of matches!
@@ -67,16 +66,6 @@ def SaveModel(model: SparseModel):
     if not os.path.exists(dest_path):
         os.makedirs(dest_path)
     rwm.write_model(model.cameras, model.images, model.points, dest_path, ".txt")
-
-
-if __name__ == "__main__":
-    project = SparseModel(project_path)
-    test_images = ["L0798"]
-    ExtractSubModel()
-
-from shutil import copyfile
-import os.path
-from pathlib import Path
 
 
 def PortImages(model: SfmModel, images_path: Path, dest_model: SparseModel):

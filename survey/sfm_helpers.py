@@ -1,11 +1,6 @@
 from pathlib import Path
-
 from colmap_scripts.read_write_model import Point3D, Image, Camera
-from serialization import Aerial2PdsmEncoder
-
-project_path = r"/home/felix/pointclouds/katrin_isolate/2018-10-02/Reconstruction_Muenchen_10_02_2018"
-keypoint_path = r"/home/felix/pointclouds/katrin_isolate/2018-10-02/2018-10-02.txt"
-
+from data_io.encoder_init import Aerial2PdsmEncoder
 from colmap_scripts import read_write_model as rm
 import numpy as np
 
@@ -58,10 +53,6 @@ class SfmModel:
     def FromDict(dct):
         obj = SfmModel(Path(dct["path"]))
         return obj
-
-    # @classmethod
-    # def FromDict(dict):
-    #     pass
 
 
 class SparseModel(SfmModel):
