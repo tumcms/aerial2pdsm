@@ -1,8 +1,11 @@
 venv
 *.pyc
 .idea
-submodules
-!submodules/colmap_scripts/populator.ppy
+submodules/*
+!submodules/colmap_scripts
+!submodules/gitdir
+!submodules/colmap_automate
+!submodules/populator.py
 venv
 conda
 
