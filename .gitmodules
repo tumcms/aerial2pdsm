@@ -1,6 +1,3 @@
-[submodule "submodules/colmap_automate"]
-	path = submodules/colmap_automate
-	url = https://github.com/tumcms/colmap_automate.git
 [submodule "submodules/gitdir"]
 	path = submodules/gitdir
 	url = https://github.com/FelixEickeler/gitdir.git
