@@ -1,3 +1,6 @@
 [submodule "colmap_automate"]
-	path = colmap_automate
-	url = https://gitlab.lrz.de/cms/dev/colmap_automate.git
+	path = submodules/colmap_automate
+	url = https://github.com/tumcms/colmap_automate.git
+[submodule "submodules/gitdir"]
+	path = submodules/gitdir
+	url = https://github.com/FelixEickeler/gitdir.git

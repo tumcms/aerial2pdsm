@@ -1,6 +1,6 @@
 import numpy as np
 from colmap_scripts import read_write_model as rwm
-from colmap_scripts.database import COLMAPDatabase, blob_to_array
+from submodules.colmap_scripts.database import COLMAPDatabase, blob_to_array
 from colmap_scripts.read_write_model import BaseImage, Camera, CAMERA_MODEL_IDS, Point3D, qvec2rotmat
 from sfm_helpers import SparseModel, GetInlineMatches, SfmModel
 from shutil import copyfile

@@ -2,8 +2,8 @@ from pathlib import Path
 import numpy as np
 from survey import pdsm_creator
 from data_io.closest_keypoint import ReadKeypointFile
-from colmap_automate.app import CreateDirectory, Reconstructor, ReconstructionConfig
-from colmap_scripts.database import COLMAPDatabase
+from submodules.colmap_automate.app import CreateDirectory, Reconstructor, ReconstructionConfig
+from submodules.colmap_scripts.database import COLMAPDatabase
 from sfm_helpers import SfmModel, Keypoint
 from survey.coordinate_mapping import CoordMapping
 from survey.detected_areas import DetectedArea

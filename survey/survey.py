@@ -4,8 +4,8 @@ from pathlib import Path
 import numpy as np
 import pymap3d as pm
 
-from colmap_automate.app import ReconstructionConfig
-from colmap_scripts.database import COLMAPDatabase
+from submodules.colmap_automate.app import ReconstructionConfig
+from submodules.colmap_scripts.database import COLMAPDatabase
 from sfm_helpers import Keypoint, SfmModel
 from detected_areas import DetectedArea
 from data_io.exif_adder import Gps2Exif

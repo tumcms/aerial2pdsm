@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import numpy as np
-from colmap_automate.app import CreateDirectory
-from colmap_scripts.database import COLMAPDatabase
+from submodules.colmap_automate.app import CreateDirectory
+from submodules.colmap_scripts.database import COLMAPDatabase
 from sfm_helpers import Keypoint, SfmModel
 from survey.helpers import GetClosestFeature
 from survey.observation import Observation
