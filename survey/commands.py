@@ -13,6 +13,7 @@ from survey.helpers import pairwise, GetClosestFeature, Unit, Project2Plane, Rot
 from survey.observation import Observation, MedianFilter
 from data_io.sql_interface import CreateObservationsTable, CreateDetectedAreasTable
 from survey.survey import Survey
+import pymap3d as pm
 
 
 def CreateLocalModels(survey: Survey):
@@ -64,6 +65,9 @@ def IsolateConstructionSites(survey: Survey, object_detection_keypoint_file_path
     :param survey:
     :param object_detection_keypoint_file_path:
     """
+    if survey.global_model is None:
+        exit("Please run global model first")
+    
     if not survey.global_model.cameras:
         SfmModel.parse_binary_model(survey.global_model)
 

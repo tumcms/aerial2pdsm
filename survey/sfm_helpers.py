@@ -45,6 +45,9 @@ class SfmModel:
             del d["points"]
             del d["images"]
             del d["cameras"]
+            self.points: {Point3D} = {}
+            self.images: {Image} = {}
+            self.cameras: {Camera} = {}
         except:
             # No points loaded
             pass

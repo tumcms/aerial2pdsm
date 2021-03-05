@@ -35,7 +35,7 @@ class Survey:
         return self.root_path / "detected_areas"
 
     def get_global_model_path(self):
-        return self.root_path / "sparse" / "0"
+        return self.root_path / "sparse" 
 
     def __init__(self, survey_path, geo_info: GeoReferenceInformation, rconfig: ReconstructionConfig):
         self.root_path: Path = Path(survey_path)
@@ -50,8 +50,8 @@ class Survey:
     def CreateSurvey(image_src, survey_path, geo_info: GeoReferenceInformation, rconfig: ReconstructionConfig = None, copy=True):
         image_src = Path(image_src).expanduser()
         survey_path = Path(survey_path).expanduser()
-        image_path = survey_path / "images"
-        rconfig = ReconstructionConfig.CreateStandardConfig(survey_path, image_path, survey_path / survey_path.with_suffix(".db")) if not rconfig else rconfig
+        image_path = survey_path / "images"        
+        rconfig = ReconstructionConfig.CreateStandardConfig(survey_path, image_path, (survey_path / survey_path.name).with_suffix(".db")) if not rconfig else rconfig
 
         if copy:
             shutil.copytree(image_src, image_path, dirs_exist_ok=True)
@@ -86,8 +86,8 @@ class Survey:
 
     def write(self, dest_path: Path = None):
         dest_path = Path(dest_path) if dest_path else self.root_path
-        print(Aerial2PdsmEncoder._registered)
         _json = Aerial2PdsmEncoder().encode(self)
+        # TODO save? 
 
     @staticmethod
     def LoadFromJson(path: Path):
