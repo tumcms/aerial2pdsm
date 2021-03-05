@@ -1,3 +1,4 @@
+from re import compile
 pattern_read = compile(r'(^\w*).(\w*):\s*([\w\d,\[\]\.]*)')
 pattern_write = compile(r'.*\[([\d\.]*),([\d\.]*),([\d\.]*)\]')
 

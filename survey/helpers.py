@@ -1,8 +1,8 @@
 import numpy as np
+import plyfile # can also be used from colmap_scripts
 from numpy.lib.recfunctions import structured_to_unstructured, unstructured_to_structured
-from colmap_scripts import read_write_model as rm
-import plyfile
-from colmap_scripts.read_write_model import Point3D
+from submodules.colmap_scripts import read_write_model as rm
+from submodules.colmap_scripts.read_write_model import Point3D
 from sfm_helpers import QueryMatch, Keypoint, SparseModel, GetInlineMatches, SfmModel
 from scipy.spatial import KDTree, cKDTree
 from os.path import basename

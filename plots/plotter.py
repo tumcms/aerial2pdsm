@@ -1,4 +1,4 @@
-from config import GetInlineMatches, QueryMatch
+from survey.sfm_helpers import GetInlineMatches, QueryMatch
 import matplotlib.pyplot as plt
 
 plt.ioff()

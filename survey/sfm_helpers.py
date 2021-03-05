@@ -1,7 +1,8 @@
 from pathlib import Path
-from colmap_scripts.read_write_model import Point3D, Image, Camera
+from submodules.colmap_scripts.read_write_model import Point3D, Image, Camera
+from submodules.colmap_scripts import read_write_model as rm
 from data_io.encoder_init import Aerial2PdsmEncoder
-from colmap_scripts import read_write_model as rm
+
 import numpy as np
 
 

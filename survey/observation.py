@@ -2,7 +2,7 @@ from pathlib import Path
 from matplotlib import patches
 
 from submodules.colmap_automate.app import CreateDirectory
-from colmap_scripts.read_write_model import rotmat2qvec, Point3D
+from submodules.colmap_scripts.read_write_model import rotmat2qvec, Point3D
 from sfm_helpers import QueryMatch, Keypoint, SfmModel
 import numpy as np
 

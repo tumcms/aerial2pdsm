@@ -1,5 +1,5 @@
 import numpy as np
-from config import Keypoint
+from survey.sfm_helpers import Keypoint
 
 
 def ReadKeypointFile(path):

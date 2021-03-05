@@ -3,7 +3,7 @@ import sys
 import numpy as np
 import plyfile
 
-from colmap_scripts.read_write_model import Point3D
+from submodules.colmap_scripts.read_write_model import Point3D
 from encoder_init import Aerial2PdsmEncoder
 
 

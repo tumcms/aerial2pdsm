@@ -1,7 +1,7 @@
 from pathlib import Path
 import networkx as nx
 from numpy import cbrt
-from colmap_scripts import export_inlier_matches as read_inlier_matches
+from submodules.colmap_scripts import export_inlier_matches as read_inlier_matches
 from plots.plot_ego_graph import plot_ego_graph
 
 

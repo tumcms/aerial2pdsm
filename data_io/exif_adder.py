@@ -1,12 +1,10 @@
 from pathlib import Path
 
 from piexif import GPSIFD, load, dump, insert
-import config
+import survey.sfm_helpers as config
 from os import listdir, path
 from fractions import Fraction
-
-from survey.geo_alignment import pattern_write
-from data_io.dlr_reader import ReadAux_DLR
+from data_io.dlr_reader import ReadAux_DLR, pattern_write
 
 
 # from c060604 github
