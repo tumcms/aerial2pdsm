@@ -1,6 +1,5 @@
 import json
 from pathlib import PosixPath
-
 import numpy as np
 
 

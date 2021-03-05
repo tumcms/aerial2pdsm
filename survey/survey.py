@@ -54,7 +54,7 @@ class Survey:
         rconfig = ReconstructionConfig.CreateStandardConfig(survey_path, image_path, survey_path / survey_path.with_suffix(".db")) if not rconfig else rconfig
 
         if copy:
-            shutil.copytree(image_src, image_path)
+            shutil.copytree(image_src, image_path, dirs_exist_ok=True)
             chmod_recursive(image_path)
 
             # add gps information if available
@@ -86,6 +86,7 @@ class Survey:
 
     def write(self, dest_path: Path = None):
         dest_path = Path(dest_path) if dest_path else self.root_path
+        print(Aerial2PdsmEncoder._registered)
         _json = Aerial2PdsmEncoder().encode(self)
 
     @staticmethod
@@ -143,4 +144,8 @@ class Survey:
 
 
 
-
+Aerial2PdsmEncoder.Register(ReconstructionConfig)
+Aerial2PdsmEncoder.Register(CameraPoseGeoReferenceInformation)
+Aerial2PdsmEncoder.Register(GeoReferenceInformation)
+Aerial2PdsmEncoder.Register(SurveyTaskList)
+Aerial2PdsmEncoder.Register(Survey)

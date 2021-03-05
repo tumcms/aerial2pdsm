@@ -10,3 +10,4 @@ def init():
     Aerial2PdsmEncoder.Register(GeoReferenceInformation)
     Aerial2PdsmEncoder.Register(SurveyTaskList)
     Aerial2PdsmEncoder.Register(Survey)
+    print("classes registered")

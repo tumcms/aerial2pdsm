@@ -1,7 +1,8 @@
 from survey.geo_reference_information import CameraPoseGeoReferenceInformation
 from survey.survey import Survey
 from survey.commands import CreateLocalModels, CreateGlobalModel, ExtendDataBase, IsolateConstructionSites
-import argparse
+from data_io import decoder_setup as serialization
+import argparse    
 
 if __name__ == "__main__":
 
@@ -19,9 +20,8 @@ if __name__ == "__main__":
     bb_keypoints_file = args.bounding_box_corners
 
     survey = None
-
     # Check if survey exists else create new
-    try:
+    try:        
         survey = Survey.LoadFromJson(survey_path + "/survey.ini")
     except:
         geo_info = CameraPoseGeoReferenceInformation()

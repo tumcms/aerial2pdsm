@@ -146,7 +146,7 @@ def CreateGlobalModel(survey: Survey, with_dense=False, force_new_model=False):
     if force_new_model:
         raise NotImplementedError("Sorry delete manually!")
 
-    script_base_directory = Reconstructor.GetPathOfCurrentFile()
+    script_base_directory = Reconstructor.GetPathOfCurrentFile().parents[0]
     source_config = script_base_directory.parent / "base_configurations" / "global_model"
     global_config_path = survey.get_global_config_path()
     Reconstructor.Generic2SpecificJobFiles(source_config, global_config_path, survey.rconfig_global)
