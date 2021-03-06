@@ -94,9 +94,8 @@ class Observation:
         # Count number of inline features of the data source (mostly a selected area)
         for p3d in self.inliers:
             for iid in p3d.image_ids:
-                full_path = project.images[iid.item()].name
-                name = full_path.split("/")[1]
-                name = name.split(".")[0]
+                full_path = Path(project.images[iid.item()].name)
+                name = full_path.stem
                 if name not in uimages:
                     uimages[name] = {"val": 0, "full_path": full_path, "id": iid}
                 uimages[name]["val"] += 1
@@ -152,7 +151,11 @@ class Observation:
 
         construction_site_graph = result_folder / "#{}_graph.ply".format(obs_id)
         if self.graph:
-            WriteEgoGraph(self.graph, "ConstructionSite", construction_site_graph)
+            try:
+                WriteEgoGraph(self.graph, "ConstructionSite", construction_site_graph)
+            except ValueError as e:
+                print("Something went wrong, make sure Orca is installed properly: ")
+                print(e)
 
         image_detected_area = result_folder / "#{}_features.svg".format(self.id)
 

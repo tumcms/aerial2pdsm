@@ -38,7 +38,7 @@ def CreateLocalModels(survey: Survey):
         pdsm_creator.AnalyseDepth(sub_model)
         # sets up the reconstruction
         this_file_path = Reconstructor.GetPathOfCurrentFile()
-        source_config = this_file_path.parent / "base_configurations" / "local_model"
+        source_config = this_file_path.parents[1] / "base_configurations" / "local_model"
         rec_conf = ReconstructionConfig.CreateStandardConfig(sub_model.base_path, database_path=Path(sub_model.base_path, "pdsm.db"),
                                                              min_depth=min_depth - 10, max_depth=max_depth)
         rec_conf.image_global_list = survey.rconfig_global.image_global_list
@@ -67,7 +67,7 @@ def IsolateConstructionSites(survey: Survey, object_detection_keypoint_file_path
     """
     if survey.global_model is None:
         exit("Please run global model first")
-    
+
     if not survey.global_model.cameras:
         SfmModel.parse_binary_model(survey.global_model)
 
@@ -75,7 +75,7 @@ def IsolateConstructionSites(survey: Survey, object_detection_keypoint_file_path
         raise ConnectionError("Database was not extended previously")
 
     keypoint_file_path = Path(object_detection_keypoint_file_path)
-    keypoints = ReadKeypointFile(keypoint_file_path)
+    keypoints = ReadKeypointFile(keypoint_file_path.expanduser())
     CreateDirectory(survey.get_observations_path())
     observation_graphs = []
 
@@ -187,5 +187,3 @@ def ExtendDataBase(survey: Survey):
     CreateObservationsTable(db)
     CreateDetectedAreasTable(db)
     survey.task_list.extend_database = True
-
-
