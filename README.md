@@ -2,7 +2,7 @@
 This git is the accompaning code for the paper published "Adopting computer vision for extracting data from aerial images of development areas" by Jahr & Eickeler.
 Preferably images and gps data of the plane / helicopter / drone is provided.
 
-![Result Overview](https://github.com/tumcms/aerial2pdsm/example_files/blue_oc_s2_low.png?raw=true)
+![Result Overview](example_files/blue_oc_s2_low.png?raw=true)
 
 This prototype will follow this process process:
 
