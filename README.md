@@ -44,7 +44,7 @@ This toolchain was only developed on Linux, however, most of this code and tools
 ## Usage:
 ### Input data
 #### Survey
-The input was recorded from a 2-3 camera setup. Each camera was put into its own folder.\
+The input was recorded from a 2-3 camera setup. Each camera was put into its own folder.  
 > left - (mid) - right  
 
 Additionally, every image was accompanied by a file stating the recording position of a GPS system (see example files). The information can be provided in the image itself via EXIF or by a similar [image_name].aux file with GPSIMU.Position: 3, [long, lat, height]. If you have configured data already, you can also modify the data_io/exif_adder.py.-
@@ -62,10 +62,10 @@ You can start the analysis by calling:
 ```  
  
 ### Checkpoints
-After each major step: copying the files, rough sfm model, isolation, fine sfm model (pdsm), a checkpoint is reached. This also means that you may need to delete the previously generated files if a step goes source.
+After each major step: copying the files, rough sfm model, isolation, fine sfm model (pdsm), a checkpoint is reached. This also means that you may need to delete the previously generated files if a step goes sour.
 
 ### Results
-All results a put into the /path/to/output/folder. \
-1. The rough model is in /sparse\
+All results a put into the /path/to/output/folder.  
+1. The rough model is in /sparse  
 2. The isolated areas are in /observations. The subfolders are named by the major image and are containing: a fine model, coordinate system, image, graph used (if orca was installed)
 3. The graph information is put into /detected_areas and is saved as XML
